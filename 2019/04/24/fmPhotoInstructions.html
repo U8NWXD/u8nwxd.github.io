@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chris Skalnik | How to Process Focal Male Photos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	  
+    <link rel="apple-touch-icon" sizes="180x180" href="https://u8nwxd.github.io/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://u8nwxd.github.io/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://u8nwxd.github.io/assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://u8nwxd.github.io/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="https://u8nwxd.github.io/assets/site.webmanifest">
+    <link rel="mask-icon" href="https://u8nwxd.github.io/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+	  
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/custom.min.css">
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/syntax.css">
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/custom.css">
+  </head>
+
+  <body>
+  
+<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <div class="container">
+        <a href="https://u8nwxd.github.io" class="navbar-brand">Chris Skalnik</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+		
+		
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+						
+            <li class="nav-item dropdown">
+			   
+			   <a class="nav-link" href="https://u8nwxd.github.io/">Home<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			        
+			  			
+            <li class="nav-item dropdown">
+			   
+			   <a class="nav-link" href="https://u8nwxd.github.io/blog">Blog<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			        
+			  			
+            <li class="nav-item dropdown">
+			   
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Biology<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			  
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/biology/fernaldLab">Fernald Lab</a>
+				
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/biology/biofilms">Biofilms Research</a>
+				      
+			  			
+            <li class="nav-item dropdown">
+			   
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Computer Science<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			  
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/computation/openSource">Open Source</a>
+				
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/computation/codethechange">Code the Change</a>
+				      
+			  	
+               </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="page-header">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>How to Process Focal Male Photos</h1>
+			
+			
+			<p class="lead">Instructions for Processing Focal Male Photos</p>
+			
+			<p class="lead">Written by Chris Skalnik on Apr 24th, 2019</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Containers
+      ================================================== -->
+      
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+            </div>
+            <div class="bs-component">
+              <div class="jumbotron">		
+				<p class="lead"><p>These instructions were written by Christopher Skalnik while working
+under Beau Alward in the Fernald Lab at Stanford University.</p>
+
+<p>Copyright © 2019 Stanford University, All rights reserved.
+Note that this work is <em>NOT</em> released under the same license as the rest
+of the site.</p>
+
+<p>This page was first posted on May 9, 2019, but it had previously been
+hosted elsewhere on this site. I made it a blog post so its link would
+be more permanent.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>These instructions are for processing photos of focal males from dyad
+assays in the <a href="https://fernaldlab.stanford.edu">Fernald Lab</a>.</p>
+
+<h2 id="setup">Setup</h2>
+
+<h3 id="setup-work-folder">Setup Work Folder</h3>
+
+<ol>
+  <li>Create a folder for your work. In this example, we'll call it
+<code class="highlighter-rouge">ARalpha</code> and place it in the home folder (<code class="highlighter-rouge">~/ARalpha</code>).</li>
+  <li>Within that folder, add another folder containing photos of the
+focal males you want to analyze. These should be all the photos for
+the comparison, including both mutants and wildtypes. In this
+example, we'll call the folder <code class="highlighter-rouge">fmPhotos</code> so that the path to one
+photo called <code class="highlighter-rouge">photo1.jpg</code> is <code class="highlighter-rouge">~/ARalpha/fmPhotos/photo1.jpg</code>.</li>
+</ol>
+
+<h3 id="install-dependencies">Install Dependencies</h3>
+
+<ol>
+  <li>Install Python 3 from <a href="https://www.python.org/">https://www.python.org/</a>. You can also
+install Python using Homebrew on a Mac, just make sure you have
+version 3 of Python.</li>
+  <li>Figure out what command you need to run to execute Python 3. You can
+check this by running <code class="highlighter-rouge">python --version</code> and <code class="highlighter-rouge">python3 --version</code>. If
+the <code class="highlighter-rouge">python --version</code> command prints a version starting with <code class="highlighter-rouge">3</code>,
+you are good to go. If you need to run <code class="highlighter-rouge">python3</code> to get that version
+to print, you will need to replace <code class="highlighter-rouge">python</code> and <code class="highlighter-rouge">pip</code> below with
+<code class="highlighter-rouge">python3</code> and <code class="highlighter-rouge">pip3</code>.</li>
+  <li>If you like using virtual environments or conda environments, now is
+the time to set one up. Activate it for the rest of the steps. Make
+sure to use Python version 3 when you create it.</li>
+  <li>Along with Python comes a tool for installing python packages. You
+can run this tool using the <code class="highlighter-rouge">pip</code> command. We will do this in later
+steps.</li>
+</ol>
+
+<h2 id="computing-the-overlay">Computing the Overlay</h2>
+
+<p>This is how we combine all the images to decide what regions to crop
+out.</p>
+
+<h3 id="install-dependencies-1">Install Dependencies</h3>
+
+<ol>
+  <li>
+    <p>Download the <code class="highlighter-rouge">overlay</code> tool from GitHub by going to its GitHub page
+at <a href="https://github.com/U8NWXD/overlay">https://github.com/U8NWXD/overlay</a>, clicking the
+<code class="highlighter-rouge">Clone or download</code> button, and selecting <code class="highlighter-rouge">Download ZIP</code>. Unzip the
+downloaded file in the <code class="highlighter-rouge">ARalpha</code> directory so that you have an
+<code class="highlighter-rouge">overlay.py</code> file at the path
+<code class="highlighter-rouge">~/ARalpha/overlay-master/overlay/overlay.py</code>. If you prefer to use
+<code class="highlighter-rouge">git</code>, you can instead run:</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> git clone https://github.com/U8NWXD/overlay.git overlay-master
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>To install the Python dependencies that <code class="highlighter-rouge">overlay</code> needs, run</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">cd</span> ~/ARalpha
+<span class="gp">$</span> pip <span class="nb">install</span> <span class="nt">-r</span> overlay-master/requirements.txt
+</code></pre></div>    </div>
+
+    <p>to tell <code class="highlighter-rouge">pip</code> to install all the dependencies listed in the
+<code class="highlighter-rouge">overlay</code> requirements file.</p>
+  </li>
+</ol>
+
+<h3 id="run-overlay">Run <code class="highlighter-rouge">overlay</code></h3>
+
+<p>The shorthand reference for how to use the <code class="highlighter-rouge">overlay</code> tool is:</p>
+
+<p><code class="highlighter-rouge">overlay.py [mean | median] img1 img2 [additional images]</code></p>
+
+<p>This means that to compute the overlay of all our images in
+<code class="highlighter-rouge">~/ARalpha/fmPhotos/</code> by computing the median of the pixel values, we
+would run the following commands:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">cd</span> ~/ARalpha
+<span class="gp">$</span> overlay-master/overlay/overlay.py median fmPhotos/<span class="k">*</span>
+</code></pre></div></div>
+
+<p>where the <code class="highlighter-rouge">fmPhotos/*</code> will get expanded by your terminal (technically
+it's expanded by bash) into a space-separated list of all the files in
+<code class="highlighter-rouge">fmPhotos/</code>. If you wanted to use the mean instead of the median, just
+replace <code class="highlighter-rouge">median</code> in the command with <code class="highlighter-rouge">mean</code>. The result will be a file
+<code class="highlighter-rouge">~/ARalpha/composite_median.jpg</code> or <code class="highlighter-rouge">~/ARalpha/composite_mean.jpg</code> which
+stores the composite image. Move this image into <code class="highlighter-rouge">~/ARalpha/fmPhotos/</code>.</p>
+
+<h2 id="generating-the-crops">Generating the Crops</h2>
+
+<h3 id="install-dependencies-2">Install Dependencies</h3>
+
+<ol>
+  <li>
+    <p>Download the <code class="highlighter-rouge">batch_crop</code> tool from GitHub by going to its GitHub
+page at <a href="https://github.com/U8NWXD/batch_crop">https://github.com/U8NWXD/batch_crop</a>, clicking the
+<code class="highlighter-rouge">Clone or download</code> button, and selecting <code class="highlighter-rouge">Download ZIP</code>. Unzip the
+downloaded file in the <code class="highlighter-rouge">ARalpha</code> directory so that you have an
+<code class="highlighter-rouge">overlay.py</code> file at the path
+<code class="highlighter-rouge">~/ARalpha/batch_crop-master/batch_crop/batch_crop.py</code>. If you
+prefer to use <code class="highlighter-rouge">git</code>, you can instead run:</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> git clone https://github.com/U8NWXD/batch_crop.git batch_crop-master
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>To install the Python dependencies that <code class="highlighter-rouge">batch_crop</code> needs, run</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">cd</span> ~/ARalpha
+<span class="gp">$</span> pip <span class="nb">install</span> <span class="nt">-r</span> batch_crop-master/requirements.txt
+</code></pre></div>    </div>
+
+    <p>to tell <code class="highlighter-rouge">pip</code> to install all the dependencies listed in the
+<code class="highlighter-rouge">batch_crop</code> requirements file.</p>
+  </li>
+</ol>
+
+<h3 id="run-batch_crop">Run <code class="highlighter-rouge">batch_crop</code></h3>
+
+<h4 id="select-crop-regions">Select Crop Regions</h4>
+
+<p>To run <code class="highlighter-rouge">batch_crop</code>, you just need to run the command</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">cd</span> ~/ARalpha/batch_crop-master
+<span class="gp">$</span> python batch_crop/batch_crop.py
+</code></pre></div></div>
+
+<p>This will open up a graphical interface in a window you can use. On
+macOS Mojave, you may need to use light mode and slightly resize the
+window in order to see the button labels. Thanks to the answers to this
+StackOverflow post for helping me figure this out:
+<a href="https://stackoverflow.com/q/52529403">https://stackoverflow.com/q/52529403</a>.</p>
+
+<p>Now, we need to select the regions we want to crop. We will use the
+composite image we created with <code class="highlighter-rouge">overlay</code> to choose these regions. We
+can load that image by clicking the <code class="highlighter-rouge">Load Image</code> button in the
+<code class="highlighter-rouge">batch_crop</code> window and selecting the composite image.</p>
+
+<p>Next, click and drag on the image to draw out a rectangle. You can
+change your selection by just drawing another rectangle, which will
+replace the earlier one. For example, we might select the pectoral fin
+of the fish. Because we are using a composite image, this corresponds to
+where most of the photographed have their pectoral fins.</p>
+
+<p>To make sure you can exactly replicate this crop in the future, click on
+the <code class="highlighter-rouge">Save Coordinates</code> button to save the coordinates of your selection.
+Note that coordinates are stored as relative positions, so this file
+will still work for differently-sized images.</p>
+
+<p>Now, we are finally ready to make the crops. Click on
+<code class="highlighter-rouge">Crop All Matching Images</code> to generate crops for every file in the same
+folder and with the same file extension as the loaded image. Each crop
+will be of the selected region, but re-scaled for differently-sized
+images. To move these photos into a separate folder, run the commands:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">cd</span> ~/ARalpha/fmPhotos
+<span class="gp">$</span> <span class="nb">mkdir </span>pectoral
+<span class="gp">$</span> <span class="nb">mv</span> <span class="k">*</span>_cropped.jpg pectoral
+</code></pre></div></div>
+
+<p>This moves all the crops into a folder called <code class="highlighter-rouge">pectoral</code>.</p>
+
+<p>If in the future you want to replicate this crop, you can click on
+<code class="highlighter-rouge">Load Coordinates</code> and load in the file you saved off earlier.</p>
+
+<p>Now you can repeat these steps for any other regions you wish to crop
+out. These crops can then be analyzed with other tools.</p>
+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+      <footer id="footer">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <li class="float-lg-right"><a href="#top">Back to top</a></li>			  
+			  
+			  
+                
+                  <li><a href="https://www.linkedin.com/in/christopher-skalnik">Linkedin</a></li>
+                
+              
+                
+                  <li><a href="https://github.com/U8NWXD">Github</a></li>
+                
+              
+                
+                  <li><a href="mailto:cs.temporary@icloud.com">Email</a></li>
+                
+              
+                
+                  <li><a href="https://u8nwxd.github.io/0x12C1B5FF558317E5.asc">OpenPGP</a></li>
+			    
+              
+                
+                  <li><a href="https://keybase.io/v9n2kl">Keybase</a></li>
+                
+              
+                
+                  <li><a href="https://u8nwxd.github.io/attributions">Attributions</a></li>
+			    
+              
+                
+                  <li><a href="https://u8nwxd.github.io/security">Security</a></li>
+			    
+              
+			  
+            </ul>
+            <ul class="list-unstyled">
+            <li>
+                Unless otherwise noted, Copyright &copy 
+                2019 - 2019
+                Christopher Skalnik, and content is
+                licensed under the 
+                <a href="https://creativecommons.org/licenses/by/4.0/">
+                    CC-BY 4.0 International License
+                </a>
+            </li>
+            <li class="float-lg-right">
+                <a href="https://creativecommons.org/licenses/by/4.0/">
+                <img
+                    src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png"
+                    alt="Icon for Creative Commons"
+                    width="100">
+                </a>
+            </li>
+            </ul>
+            <p>
+                Last updated May 19th, 2019.
+            </p>
+          </div>
+        </div>
+
+      </footer>
+
+
+    </div>
+    <script src="https://u8nwxd.github.io/assets/js/jquery.min.js"></script>
+    <script src="https://u8nwxd.github.io/assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
