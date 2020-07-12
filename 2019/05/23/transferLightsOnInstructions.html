@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chris Skalnik | How to Transfer Lights-On Marks in Behavior Logs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	  
+    <link rel="apple-touch-icon" sizes="180x180" href="https://u8nwxd.github.io/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://u8nwxd.github.io/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://u8nwxd.github.io/assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://u8nwxd.github.io/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="https://u8nwxd.github.io/assets/site.webmanifest">
+    <link rel="mask-icon" href="https://u8nwxd.github.io/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+	  
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/custom.min.css">
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/syntax.css">
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/custom.css">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>How to Transfer Lights-On Marks in Behavior Logs | Chris Skalnik</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="How to Transfer Lights-On Marks in Behavior Logs" />
+<meta name="author" content="Chris Skalnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using scorevideo_lib to transfer lights-on marks into behavior logs" />
+<meta property="og:description" content="Using scorevideo_lib to transfer lights-on marks into behavior logs" />
+<meta property="og:site_name" content="Chris Skalnik" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-05-23T00:00:00-04:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/https://u8nwxd.github.io/2019/05/23/transferLightsOnInstructions.html"},"url":"/https://u8nwxd.github.io/2019/05/23/transferLightsOnInstructions.html","author":{"@type":"Person","name":"Chris Skalnik"},"description":"Using scorevideo_lib to transfer lights-on marks into behavior logs","headline":"How to Transfer Lights-On Marks in Behavior Logs","dateModified":"2019-05-23T00:00:00-04:00","datePublished":"2019-05-23T00:00:00-04:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+  
+<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <div class="container">
+        <a href="https://u8nwxd.github.io" class="navbar-brand">Chris Skalnik</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+		
+		
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+						
+            <li class="nav-item dropdown">
+			   
+			   <a class="nav-link" href="https://u8nwxd.github.io/">Home<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			        
+			  			
+            <li class="nav-item dropdown">
+			   
+			   <a class="nav-link" href="https://u8nwxd.github.io/blog">Blog<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			        
+			  			
+            <li class="nav-item dropdown">
+			   
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Biology<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			  
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/biology/fernaldLab">Fernald Lab</a>
+				
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/biology/biofilms">Biofilms Research</a>
+				      
+			  			
+            <li class="nav-item dropdown">
+			   
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Computer Science<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			  
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/computation/openSource">Open Source</a>
+				
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/computation/codethechange">Code the Change</a>
+				      
+			  	
+               </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="page-header">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>How to Transfer Lights-On Marks in Behavior Logs</h1>
+			
+			
+			<p class="lead">Using scorevideo_lib to transfer lights-on marks into behavior logs</p>
+			
+			<p class="lead">Written by Chris Skalnik on May 23rd, 2019</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Containers
+      ================================================== -->
+      
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+            </div>
+            <div class="bs-component">
+              <div class="jumbotron">		
+				<p class="lead"><p>These instructions were written by Christopher Skalnik while working
+under Beau Alward in the Fernald Lab at Stanford University.</p>
+
+<p>Copyright © 2019 Stanford University, All rights reserved.
+Note that this work is <em>NOT</em> released under the same license as the rest
+of the site.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Let’s say that we have these types of behavior logs:</p>
+
+<ul>
+  <li>
+    <p>Full Scoring Logs: Records every behavior observed over the 30-minute
+period we analyze. These behaviors are the ones we will measure and
+analyze. These logs come from the morning and afternoon, and they
+have names like:</p>
+
+    <ul>
+      <li>Afternoon: <code class="highlighter-rouge">050118_OD1030618_TA23_Dyad_Afternoon.wmv_CS.txt</code></li>
+      <li>Morning: <code class="highlighter-rouge">050118_OD1030618_TA23_Dyad_Morning.wmv_CS.txt</code></li>
+    </ul>
+
+    <p>We sometimes call these videos “trims,” “trimmed,” or “spliced.”</p>
+  </li>
+  <li>First Aggression Logs: When we are creating the 30-minute video for
+the full scoring log, we don’t start the morning video until the fish
+have started behaving.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> These logs are the ones we create when
+scoring for that first behavior. They have names like
+<code class="highlighter-rouge">log052318_OD1030618_OC4C_Dyad_#.avi_CS.txt</code> where <code class="highlighter-rouge">#</code> can be either a
+<code class="highlighter-rouge">1</code>, for the first video recorded of that subject that day, or a <code class="highlighter-rouge">2</code>
+for the second video. These logs do not necessarily cover the full
+video because we usually stop scoring once we see and score that first
+behavior. The times in these logs are the ones we use when making the
+full scoring logs. These logs are for the un-trimmed videos.</li>
+  <li>Lights On Logs: We also score the un-trimmed videos for the lights in
+the recording coming on. This is because we often start the recordings
+while the lights in the fish facility are still off, but we want
+to measure the latency until various behaviors from when the lights
+come on. These logs record the time that the light came on as a
+<code class="highlighter-rouge">LIGHTS ON</code> behavior and have names like
+<code class="highlighter-rouge">log052318_OD1030618_OC4C_Dyad_#.avi_CS_LIGHTSON.txt</code>, where again <code class="highlighter-rouge">#</code>
+can be either a <code class="highlighter-rouge">1</code> or a <code class="highlighter-rouge">2</code> to signify the first or second video. The
+<code class="highlighter-rouge">2</code> is possible because sometimes the first video is so short that it
+is dark throughout the video.</li>
+</ul>
+
+<p>We want to use
+<a href="https://github.com/FernaldLab/behaviorcode"><code class="highlighter-rouge">behaviorcode</code></a> or
+<a href="https://github.com/U8NWXD/behaviorcodeAuto"><code class="highlighter-rouge">behaviorcodeAuto</code></a> to
+statistically analyze the behavior and latency data, but these scripts
+don’t know how to handle lights-on information being in a separate log
+file that starts at a different time than the full scoring log.
+Therefore, we need to add a <code class="highlighter-rouge">LIGHTS ON</code> mark (in the <code class="highlighter-rouge">MARKS</code> section) to
+the full scoring log with a negative frame number and timestamp to
+accurately reflect when the lights came on relative to the behaviors in
+the full scoring log. We can use
+<a href="https://github.com/U8NWXD/scorevideo_lib"><code class="highlighter-rouge">scorevideo_lib</code></a> to do this!</p>
+
+<h2 id="setup">Setup</h2>
+
+<ol>
+  <li>
+    <p>Download scorevideo_lib from
+<a href="https://github.com/U8NWXD/scorevideo_lib/releases">here</a>. Make sure
+to note which release you use! If you prefer, you can also use <code class="highlighter-rouge">git</code> to
+clone the repository like this:</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> git clone https://github.com/U8NWXD/scorevideo_lib.git
+<span class="gp">$</span> <span class="nb">cd </span>scorevideo_lib
+<span class="gp">$</span> git checkout v0.4.1-beta
+</code></pre></div>    </div>
+
+    <p>Note that you probably want to use the most recent release by
+changing <code class="highlighter-rouge">v0.4.1-beta</code> to the release you want. You <em>should use a
+release</em> and not just the <code class="highlighter-rouge">master</code> branch because <code class="highlighter-rouge">master</code> may
+represent work in progress that is not yet ready for use.</p>
+
+    <p>For the rest of this guide, I will start my paths with
+<code class="highlighter-rouge">scorevideo_lib</code> to refer to the root folder of the repository.</p>
+  </li>
+  <li>Install <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>. While this is
+not normally necessary just to run programs, PyCharm correctly tells
+Python how to find and import files. However, this step may not be
+needed later if I change the scripts to fix this themselves.</li>
+  <li>Import the copy of scorevideo_lib you downloaded into PyCharm, which
+should be an option from the welcome screen.</li>
+  <li>Create a virtual environment by opening the PyCharm preferences,
+selecting <code class="highlighter-rouge">Project Interpreter</code> under <code class="highlighter-rouge">Project</code> in the left sidebar,
+choosing to add a virtual environment, and finally choosing to create
+a new virtual environment.</li>
+  <li>
+    <p>Activate the virtual environment by opening a new terminal from the
+bottom of your PyCharm window. Then install dependencies by running</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div>    </div>
+  </li>
+  <li>Move the file at <code class="highlighter-rouge">scorevideo_lib/fm_behaviors.txt</code> to
+<code class="highlighter-rouge">scorevideo_lib/scorevideo_lib/fm_behaviors.txt</code>. This comes from
+another quirk of how Python searches for and loads files, and this
+step may not be needed later if I fix this bug.</li>
+  <li>Create a folder at <code class="highlighter-rouge">scorevideo_lib/scorevideo_lib/work/</code>. This will
+be your work directory (<em>not</em> your working directory).</li>
+  <li>
+    <p>Into your work directory, copy the following:</p>
+
+    <ul>
+      <li>Full scoring logs, which should be unblinded if you blinded them.</li>
+      <li>First aggression logs</li>
+      <li>Lights on logs</li>
+    </ul>
+
+    <p>Note that any leading <code class="highlighter-rouge">log</code> prefixing the log filenames is ignored.
+Also note that you should <em>only include relevant files</em>. Any extra
+files, such as first aggression logs that don’t have associated full
+scoring logs, will trigger errors. Similarly, <em>all relevant files</em>
+must be included. In the next step you will specify which files
+precisely are required, but any missing files will also trigger
+errors.</p>
+  </li>
+  <li>
+    <p>In <code class="highlighter-rouge">scorevideo_lib/scorevideo_lib/transfer_lights_on_marks.py</code>, find
+the code that looks like this:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Specify regular expressions that identify logs required for every partition
+</span><span class="n">PART_REQUIRED</span> <span class="o">=</span> <span class="p">[</span><span class="n">ExpectedFile</span><span class="p">([</span><span class="s">"_Morning."</span><span class="p">],</span> <span class="p">[</span><span class="s">"_LIGHTSON.txt"</span><span class="p">]),</span>
+                 <span class="n">ExpectedFile</span><span class="p">([</span><span class="s">"_1."</span><span class="p">],</span> <span class="p">[</span><span class="s">"_LIGHTSON.txt"</span><span class="p">])]</span>
+<span class="c1"># Specify regular expressions that identify logs optional for every partition
+</span><span class="n">PART_OPTIONAL</span> <span class="o">=</span> <span class="p">[</span><span class="n">ExpectedFile</span><span class="p">([</span><span class="s">"_2."</span><span class="p">],</span> <span class="p">[</span><span class="s">"_LIGHTSON.txt"</span><span class="p">]),</span>
+                 <span class="n">ExpectedFile</span><span class="p">([</span><span class="s">"_LIGHTSON.txt"</span><span class="p">])]</span>
+<span class="c1"># Any files in partitions not matching any of the above throw errors
+</span></code></pre></div>    </div>
+
+    <p>These lines specify which files are required. To explain this, we
+first need some background on how scorevideo_lib matches up log
+files. It uses a function <code class="highlighter-rouge">get_partitions</code> in the
+<code class="highlighter-rouge">transfer_lights_on_marks.py</code> file to split the log file names into
+equivalence partitions where every partition is composed of log files
+whose names are “equal,” where “equal” means that the logs are for
+the same fish on the same day. This equality is determined by the
+<code class="highlighter-rouge">same_fish_and_day</code> function in the <code class="highlighter-rouge">transfer_lights_on_marks.py</code>
+script.</p>
+
+    <p>Once the partitions have been created, scorevideo_lib validates
+them using the <code class="highlighter-rouge">PART_REQUIRED</code> and <code class="highlighter-rouge">PART_OPTIONAL</code> constants.
+<code class="highlighter-rouge">PART_REQUIRED</code> is a list <code class="highlighter-rouge">ExpectedFile</code> objects, each of which
+describes a file. You can see the documentation
+<a href="https://scorevideo-lib.readthedocs.io/en/latest/scorevideo_lib.html#scorevideo_lib.transfer_lights_on_marks.ExpectedFile">here</a>.
+In short, the first argument to <code class="highlighter-rouge">ExpectedFile</code> is a list of strings
+that are expected to present in the file name, and the second
+argument is a list of strings that are expected to <em>not</em> be present
+in the file name. Any file name that matches both criteria “matches”
+the <code class="highlighter-rouge">ExpectedFile</code> object. scorevideo_lib checks that each partition
+has exactly one file that matches each <code class="highlighter-rouge">ExpectedFile</code> in
+<code class="highlighter-rouge">PART_REQUIRED</code> and no files that match no <code class="highlighter-rouge">ExpectedFile</code> objects in
+the union of <code class="highlighter-rouge">PART_REQUIRED</code> and <code class="highlighter-rouge">PART_OPTIONAL</code>. In other words, the
+files described in <code class="highlighter-rouge">PART_REQUIRED</code> are mandatory, while the files
+described in <code class="highlighter-rouge">PART_OPTIONAL</code> are allowable but not required.</p>
+
+    <p>Note that the script also uses a
+<a href="https://scorevideo-lib.readthedocs.io/en/latest/scorevideo_lib.html#scorevideo_lib.transfer_lights_on_marks.name_filter"><code class="highlighter-rouge">name_filter</code></a>
+function to filter out files that don’t look like logs and afternoon
+full scoring logs.</p>
+
+    <p>In my case, I used</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Specify regular expressions that identify logs required for every partition
+</span><span class="n">PART_REQUIRED</span> <span class="o">=</span> <span class="p">[</span><span class="n">ExpectedFile</span><span class="p">([</span><span class="s">"_Morning."</span><span class="p">],</span> <span class="p">[</span><span class="s">"_LIGHTSON.txt"</span><span class="p">]),</span>
+                 <span class="n">ExpectedFile</span><span class="p">([</span><span class="s">"_1."</span><span class="p">],</span> <span class="p">[</span><span class="s">"_LIGHTSON.txt"</span><span class="p">]),</span>
+                 <span class="n">ExpectedFile</span><span class="p">([</span><span class="s">"_LIGHTSON.txt"</span><span class="p">])]</span>
+<span class="c1"># Specify regular expressions that identify logs optional for every partition
+</span><span class="n">PART_OPTIONAL</span> <span class="o">=</span> <span class="p">[</span><span class="n">ExpectedFile</span><span class="p">([</span><span class="s">"_2."</span><span class="p">],</span> <span class="p">[</span><span class="s">"_LIGHTSON.txt"</span><span class="p">]),</span>
+                 <span class="p">]</span>
+<span class="c1"># Any files in partitions not matching any of the above throw errors
+</span></code></pre></div>    </div>
+
+    <p>This requires a morning full scoring log, a first aggression log for
+video 1, and a lights on log. A first aggression log for video 2 is
+optional.</p>
+  </li>
+</ol>
+
+<h2 id="run-scorevideo_lib">Run scorevideo_lib</h2>
+
+<p>You are now ready to transfer the marks. Within PyCharm, run the
+<code class="highlighter-rouge">scorevideo_lib/scorevideo_lib/transfer_lights_on_marks.py</code> script by
+clicking the green triangle in the upper right of the window.
+If this fails, you might need to set the working directory to
+<code class="highlighter-rouge">scorevideo_lib/scorevideo_lib</code> in PyCharm by choosing to
+<code class="highlighter-rouge">Edit Configurations</code> from the drop-down menu to the left of the green
+triangle.</p>
+
+<p>When scorevideo_lib finishes, you should now see <code class="highlighter-rouge">LIGHTS ON</code> marks with
+negative frame numbers and timestamps in the full scoring logs. Now
+you’re ready to analyze them!</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+
+      <p>The behaviors that count as the first behavior are stored in
+<code class="highlighter-rouge">fm_behaviors.txt</code> in the <code class="highlighter-rouge">scorevideo_lib</code> repository. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+      <footer id="footer">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <li class="float-lg-right"><a href="#top">Back to top</a></li>			  
+			  
+			  
+                
+                  <li><a href="https://www.linkedin.com/in/christopher-skalnik">Linkedin</a></li>
+                
+              
+                
+                  <li><a href="https://github.com/U8NWXD">Github</a></li>
+                
+              
+                
+                  <li><a href="mailto:cs.temporary@icloud.com">Email</a></li>
+                
+              
+                
+                  <li><a href="https://u8nwxd.github.io/0x12C1B5FF558317E5.asc">OpenPGP</a></li>
+			    
+              
+                
+                  <li><a href="https://keybase.io/v9n2kl">Keybase</a></li>
+                
+              
+                
+                  <li><a href="https://u8nwxd.github.io/attributions">Attributions</a></li>
+			    
+              
+                
+                  <li><a href="https://u8nwxd.github.io/security">Security</a></li>
+			    
+              
+			  
+            </ul>
+            <ul class="list-unstyled">
+            <li>
+                Unless otherwise noted, Copyright &copy 
+                2019 - 2020
+                Christopher Skalnik, and content is
+                licensed under the 
+                <a href="https://creativecommons.org/licenses/by/4.0/">
+                    CC-BY 4.0 International License
+                </a>
+            </li>
+            <li class="float-lg-right">
+                <a href="https://creativecommons.org/licenses/by/4.0/">
+                <img
+                    src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png"
+                    alt="Icon for Creative Commons"
+                    width="100">
+                </a>
+            </li>
+            </ul>
+            <p>
+                Last updated Jul 12th, 2020.
+            </p>
+          </div>
+        </div>
+
+      </footer>
+
+
+    </div>
+    <script src="https://u8nwxd.github.io/assets/js/jquery.min.js"></script>
+    <script src="https://u8nwxd.github.io/assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
