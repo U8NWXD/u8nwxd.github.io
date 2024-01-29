@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/v9n2kl
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://u8nwxd.github.io
+  * I am v9n2kl (https://keybase.io/v9n2kl) on keybase.
+  * I have a public key ASDdC8b_9hX6fcqLB7D3j9iTql2-yvyPGL8-kPi8E19NWwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01202353339c3605a27cb6f2df6603f91ada211428fe5921439d1856236887f548ab0a",
+      "host": "keybase.io",
+      "kid": "0120dd0bc6fff615fa7dca8b07b0f78fd893aa5dbecafc8f18bf3e90f8bc135f4d5b0a",
+      "uid": "f4eb991cac363c3d5d96cda82b2f6a19",
+      "username": "v9n2kl"
+    },
+    "merkle_root": {
+      "ctime": 1558322320,
+      "hash": "c728d9a04bab77bef9dcdf0a2ebf3b8a584b80b3e4cf168391fce8477c896dcea02a684a8ce20345da18aee8ec5b0aab073856344ed6737bc0955e0a3cee8ec6",
+      "hash_meta": "2d955de445e2685dc90696d0f8dbe86be4f942f93499258f9314516c3be86d31",
+      "seqno": 5406885
+    },
+    "service": {
+      "entropy": "YDdwlB0Xryr2g13CUcn9cyNq",
+      "hostname": "u8nwxd.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.0.0"
+  },
+  "ctime": 1558322370,
+  "expire_in": 504576000,
+  "prev": "446ca8c809acb87f26394a39ca895e89d9b7a2714344b2523eb1cdf2728b18a3",
+  "seqno": 12,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg3QvG//YV+n3Kiwew94/Yk6pdvsr8jxi/PpD4vBNfTVsKp3BheWxvYWTESpcCDMQgRGyoyAmsuH8mOUo5yoleidm3onFDRLJSPrHN8nKLGKPEIKbrKXAMFrs/JY3h1IrqEcfBd5kvc2M93q6DeOqh8TG6AgHCo3NpZ8RAQUFT4bCROVdVY0mSNTqeXmE3n5ZZt1/uc+YPvy6Bqw8fVK9V56uiQmjPpmInwfGaqaxTU/5rkAEWEX0FpF/SD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICVFY9rXr3phkcnLEb6bCiT/LdDevE4WuZ9QbApYGdMro3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/v9n2kl
+
+==================================================================

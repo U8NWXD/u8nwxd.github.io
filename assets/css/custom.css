@@ -1,0 +1,11 @@
+/* 
+ * To center images, from
+ * https://github.com/jekyll/jekyll/issues/3219#issuecomment-67767273
+ */
+.center {
+    text-align: center;
+}
+
+.jumbotron {
+    padding: 1rem 2rem;
+}

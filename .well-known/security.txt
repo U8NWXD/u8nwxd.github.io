@@ -1,0 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+# To report a security issue, see my policy at the link below.
+# This file follows the securitytxt format described here:
+# https://securitytxt.org/
+Contact: cs.temporary@icloud.com
+Encryption: https://u8nwxd.github.io/0x12C1B5FF558317E5.asc
+Preferred-Languages: en-US
+Canonical: https://u8nwxd.github.io/.well-known/security.txt
+Policy: https://u8nwxd.github.io/security
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE92kl1dErkRBFh2ePyYy7nFAZF+AFAlzgsQcACgkQyYy7nFAZ
+F+BcYw//UhpCZhvp2rWl+21f24hHnPScrsmF7k3dPujzAATIbcRIPAE16+/tOMwS
+Dtj/SMwi+TOIPdH2HCUSk92VRkXyAcrsYA6W7az3bCKrFmGFEnaEzEePErRbnhxz
+u+mVt7Rl7FJXvANfhZ8Fu/cFGduhm4O/AO6v0lS8G2H+2YRDfZfBgPGLLQtc7OaW
+xnIJWomJmMCrsAWLpE9rSn26dXHw6/MRUq3eQ+eMtpmO/ElKmlUCA+FtanaOCsYH
+XRcsb+ZadyNTtMUs34SJmCI2J/GNDrR5qObdDOSYHp4JcUd/GoSr4VudQzhG6NhS
+9Qecj3NxZdBhyB/dn7wOeIl/XPwLRgL3DXRvLLRzjBtPlb0Zj6dESjcT693Hj8eo
+b9EbdWKlucLYV8BplnOq2Cnm3VNyLjPpCzuzJZWckLeaL/V63ZbpDQ7QQ0PWmyUe
+DOomNjLPE6BKg7uGeQ1AzzZ722B7mUTF8uHDSj+bLsT1K8VQx4iiVl2FvDm5B/Lu
+q65vDZTuTnr/7bPurrrenXW+lcu7SzH+6i/HZoYbV6Egjz53ILuZAMjjrqFap+V2
+urHjTGhf5F0qwc7CI9bxBHeab94ii+r96la6b3QhOIDBWa348J+XfMd5xpub3DwI
+0ZA06rDU88ZIIGaTGMM638gYA26KyeonXLJpSaUZzKxMwwO2mhQ=
+=/Cme
+-----END PGP SIGNATURE-----
