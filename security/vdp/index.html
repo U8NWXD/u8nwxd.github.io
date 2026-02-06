@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chris Skalnik | Vulnerability Disclosure Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon"
+          type="image/svg"
+          href="https://u8nwxd.github.io/assets/favicon/favicon.svg">
+    <link rel="icon"
+          type="image/png" sizes="64x64"
+          href="https://u8nwxd.github.io/assets/favicon/favicon-64x64.png">
+    <link rel="icon"
+          type="image/png" sizes="32x32"
+          href="https://u8nwxd.github.io/assets/favicon/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png" sizes="16x16"
+          href="https://u8nwxd.github.io/assets/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/custom.min.css">
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/syntax.css">
+    <link rel="stylesheet" href="https://u8nwxd.github.io/assets/css/custom.css">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Vulnerability Disclosure Policy | Chris Skalnik</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Vulnerability Disclosure Policy" />
+<meta name="author" content="Chris Skalnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="MIT PhD student applying computational tools to biological questions and volunteering as a software developer and core maintainer at Oppia." />
+<meta property="og:description" content="MIT PhD student applying computational tools to biological questions and volunteering as a software developer and core maintainer at Oppia." />
+<meta property="og:site_name" content="Chris Skalnik" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Vulnerability Disclosure Policy" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Chris Skalnik"},"description":"MIT PhD student applying computational tools to biological questions and volunteering as a software developer and core maintainer at Oppia.","headline":"Vulnerability Disclosure Policy","url":"/https://u8nwxd.github.io/security/vdp/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+	
+  <body>
+  
+  <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <div class="container">
+        <a href="https://u8nwxd.github.io" class="navbar-brand">
+          <img src="https://u8nwxd.github.io/assets/favicon/favicon.svg"
+               alt="" width="30" height="24">
+          Chris Skalnik</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+			
+            <li class="nav-item dropdown">
+			   
+			   <a class="nav-link" href="https://u8nwxd.github.io/blog">Blog<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			  
+			  
+            <li class="nav-item dropdown">
+			   
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Biology<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			  
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/biology/covertLab">Covert Lab</a>
+				
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/biology/fernaldLab">Fernald Lab</a>
+				
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/biology/biofilms">Biofilms Research</a>
+				
+			  
+            <li class="nav-item dropdown">
+			   
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Software Engineering<span class="caret"></span></a>
+			   
+              <div class="dropdown-menu" aria-labelledby="download">
+			  
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/computation/openSource">Open Source</a>
+				
+				 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://u8nwxd.github.io/computation/codethechange">Code the Change</a>
+				
+			  
+               </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="page-header">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>Vulnerability Disclosure Policy</h1>
+			
+			
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Containers
+      ================================================== -->
+      
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+            </div>
+            <div class="bs-component">
+              <div class="jumbotron">		
+				<p class="lead"><p>Version: 1.0</p>
+
+<p>Date Effective: 2019-05-19</p>
+
+<p>I welcome and value vulnerability disclosures from responsible security
+researchers, and I recognize the importance of the work done by the
+security community. I have developed this policy to encourage and
+support responsible disclosure and the crucial work done by ethical
+hackers.</p>
+
+<h2 id="scope">Scope</h2>
+
+<p>The following are in-scope:</p>
+
+<ul>
+  <li>My personal website at
+<a href="https://u8nwxd.github.io">https://u8nwxd.github.io</a></li>
+  <li>Any of projects under my <a href="https://github.com/U8NWXD">GitHub account</a>.
+Note that only repositories owned by that account (U8NWXD) are
+in-scope. The fact that I contribute to a repository does <em>not</em> make
+it in-scope for this policy. Vulnerabilities discovered in those
+projects should be reported to the project owners.</li>
+</ul>
+
+<p>Everything not listed as in-scope above is out-of-scope and not covered
+under this policy. Note that for the sake of clarity, the following are
+explicitly out-of-scope:</p>
+
+<ul>
+  <li>Any physical exploits or research that involves physical access to my
+person or property.</li>
+  <li>Any research involving physical tresspass.</li>
+  <li>Any social engineering attack. Do not send any phishing emails, for
+example.</li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>Note that except for requirements that are explicitly restricted to
+intentional acts, both intentional and accidental violations of these
+requirements will constitute a violation of this policy.</p>
+
+<ul>
+  <li>You may not disclose any vulnerabilities without my explicit written
+permission. Note that “disclosure” here includes both public and
+private disclosure.</li>
+  <li>You may not disrupt any services nor impair others’ ability to use any
+services.</li>
+  <li>You may not modify or delete any data that I host, with the exception
+that you may do so temporarily only to demonstrate the vulnerability.</li>
+  <li>Neither this policy nor your ability to access data constitutes
+authorization for you to access that data. If you discover a
+vulnerability that provides access to data that I did not intend to be
+accessible to you, you may not access the data except to the extent
+that is strictly necessary to demonstrate the presence of a
+vulnerability.</li>
+  <li>If you encounter any data that must be protected by law (e.g. protected
+health information), you must not access the data and report the
+vulnerability immediately.</li>
+  <li>You must disclose to me, via the process described in this policy, any
+vulnerabilities you discover.</li>
+  <li>As much as possible, you must interact only with accounts you own or
+with accounts whose owners have given you explicit, informed
+permission for your activities.</li>
+  <li>You must not at any time, not even when disclosing the vulnerability
+or after disclosure, release any data you encounter that I did
+not intend to be accessible. Note that “release” here includes both
+public and private release.</li>
+  <li>You must comply with all applicable laws, including those of the
+United States of America. See the rest of this policy for safe harbor
+provisions.</li>
+  <li>You must never threaten or infringe upon anyone’s rights, safety,
+property, or person.</li>
+  <li>You must only work on those systems or programs listed as in-scope by
+this policy.</li>
+</ul>
+
+<h2 id="safe-harbor">Safe Harbor</h2>
+
+<p>I consider research conducted in accordance with this policy to be:</p>
+
+<ul>
+  <li>Conducted in good faith;</li>
+  <li>Authorized for the purposes of the Computer Fraud and Abuse Act (CFAA)
+and any any similar state laws;</li>
+  <li>Exempt from the Digital Millenium Copyright Act (DMCA); and</li>
+  <li>Lawful to the extent that the research was necessary to discover and
+report the vulnerability.</li>
+</ul>
+
+<p>I will not pursue legal action against anyone based on activities that
+are authorized by and compliant with this policy. However, note that
+these safe-harbor provisions only apply to me. If in the course of your
+research you illegally access a third party’s system, for example, that
+third party may still take legal action against you, and I might not
+defend you.</p>
+
+<p><strong>Note that the above safe harbor provisions only apply to cyber-security
+research conducted in compliance with this policy.</strong></p>
+
+<h2 id="submission-details">Submission Details</h2>
+
+<p>These details are non-binding and are only intended to give you an idea
+of how I respond to vulnerability disclosures.</p>
+
+<ul>
+  <li>Contact me using encrypted email to report the vulnerability. Details
+and my public key are available from my
+<a href="/security">security page</a>. Using an insecure communication method to
+transmit details of a vulnerability may constitute an unauthorized
+disclosure. Please include a
+description of the vulnerability and detailed steps to reproduce it.
+Reports should be clearly written in English.</li>
+  <li>I will review your disclosure and respond within 10 business days.</li>
+  <li>I may ask you for more details to help me remediate the vulnerability.</li>
+  <li>I will remediate the vulnerability.</li>
+  <li>I will most likely authorize you to publicly disclose the
+vulnerability, disclose it myself, and publicly credit you with the
+disclosure (if you so choose). I do not forsee a situation in which I
+would prevent disclosure entirely, but such a situation may arise.</li>
+</ul>
+
+<p>Note that I do not offer bug bounties, but I am happy to credit you for
+your work!</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>This policy was inspired by the following resources:</p>
+<ul>
+  <li><a href="https://researcherdocs.bugcrowd.com/docs/disclosure">BugCrowd’s Policies</a></li>
+  <li><a href="https://www.hackerone.com/blog/Vulnerability-Disclosure-Policy-Basics-5-Critical-Components">HackerOne’s Guide</a></li>
+  <li><a href="https://www.ntia.doc.gov/files/ntia/publications/ntia_vuln_disclosure_early_stage_template.pdf">Disclosure Template by NTIA</a></li>
+  <li><a href="https://www.justice.gov/criminal-ccips/page/file/983996/download">Framework from the US DOJ</a></li>
+</ul>
+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+
+      <footer id="footer">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <li class="float-lg-right"><a href="#top">Back to top</a></li>			  
+			  
+			  
+                
+                  <li><a href="https://www.linkedin.com/in/christopher-skalnik">Linkedin</a></li>
+                
+              
+                
+                  <li><a href="https://github.com/U8NWXD">Github</a></li>
+                
+              
+                
+                  <li><a href="mailto:cs.temporary@icloud.com">Email</a></li>
+                
+              
+                
+                  <li><a href="https://u8nwxd.github.io/0x12C1B5FF558317E5.asc">OpenPGP</a></li>
+			    
+              
+                
+                  <li><a href="https://keybase.io/v9n2kl">Keybase</a></li>
+                
+              
+                
+                  <li><a href="https://u8nwxd.github.io/attributions">Attributions</a></li>
+			    
+              
+                
+                  <li><a href="https://u8nwxd.github.io/security">Security</a></li>
+			    
+              
+			  
+            </ul>
+            <ul class="list-unstyled">
+            <li>
+                Unless otherwise noted, Copyright &copy 
+                2019 - 2026
+                Chris Skalnik, and content is
+                licensed under the 
+                <a href="https://creativecommons.org/licenses/by/4.0/">
+                    CC-BY 4.0 International License
+                </a>
+            </li>
+            <li class="float-lg-right">
+                <a href="https://creativecommons.org/licenses/by/4.0/">
+                <img
+                    src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png"
+                    alt="Icon for Creative Commons"
+                    width="100">
+                </a>
+            </li>
+            </ul>
+            <p>
+                Last updated Feb 5th, 2026.
+            </p>
+          </div>
+        </div>
+
+      </footer>
+
+    </div>
+    <script src="https://u8nwxd.github.io/assets/js/jquery.min.js"></script>
+    <script src="https://u8nwxd.github.io/assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
